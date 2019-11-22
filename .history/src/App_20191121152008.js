@@ -42,7 +42,7 @@ function App() {
 
               <Nav>
                 <Link to={"/student-list"} className="nav-link">
-                  Students List
+                  Student List
                 </Link>
               </Nav>
             </Nav>

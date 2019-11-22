@@ -4,18 +4,17 @@ import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import 'bootstrap/dist/css/bootstrap.css';
-
+import "bootstrap/dist/css/bootstrap.css";
+import "./App.css";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import CreateStudent from "./Components/CreateStudent";
-import EditStudent from "./Components/EditStudent";
-import StudentList from "./Components/StudentList";
+import EditStudent from "./components/EditStudent";
+import StudentList from "./components/StudentList";
 
 function App() {
-  return (
-  <Router>
+  return (<Router>
     <div className="App">
       <header className="App-header">
         <Navbar bg="dark" variant="dark">
@@ -42,7 +41,7 @@ function App() {
 
               <Nav>
                 <Link to={"/student-list"} className="nav-link">
-                  Students List
+                  Student List
                 </Link>
               </Nav>
             </Nav>

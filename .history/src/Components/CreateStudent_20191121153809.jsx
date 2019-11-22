@@ -1,0 +1,55 @@
+import React, {Component} from "react";
+import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button';
+
+export default class CreateStudent extends Component {
+
+  
+constructor(props) {
+    super(props)
+    this.state ={
+        name:'',
+        email:'',
+        id:''
+    }
+    
+}
+
+  render() {
+    return (<div class="form-wrapper">
+      <Form>
+        <Form.Group controlId="Name">
+          <Form.Label>Name</Form.Label>
+          <Form.Control type="text" value= {this.state.name} onChange={this.handleStudentNameChange.bind(this)}/>
+        </Form.Group>
+
+        <Form.Group controlId="Email">
+          <Form.Label>Email</Form.Label>
+          <Form.Control type="email" value={this.state.email} onChange={this.sh}/>
+        </Form.Group>
+
+        <Form.Group controlId="Name">
+          <Form.Label>ID</Form.Label>
+          <Form.Control type="text"/>
+        </Form.Group>
+
+        <Button variant="danger" size="lg" block="block" type="submit">
+          Create Student
+        </Button>
+      </Form>
+    </div>);
+  }
+
+
+  handleStudentNameChange(e){
+    this.setState({name:e.target.value});
+  }
+
+  handleEmailChange(e){
+      this.setState({email :e.target.value});
+  }
+
+  handleIDChange(e){
+      this.setState({id :e.target.value});
+  }
+}
